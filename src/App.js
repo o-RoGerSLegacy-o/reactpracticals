@@ -1,23 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from "react";
+import "./App.css";
+import Hello1stcompo from "./components/Hello1stcompo";
+import Props2ndComp from "./components/Props2ndComp";
 
 function App() {
+  const [before, after] = useState("noob");
+
+  const changeHandler = () => {
+    after("Intermediate");
+  };
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <p>hii</p>
+      <Hello1stcompo />
+      <Props2ndComp occupation="developer" hobby="coding" />
+      <p>{before}</p>
+      <button onClick={changeHandler}>click me</button>
     </div>
   );
 }
