@@ -1,22 +1,32 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import "./App.css";
-import Hello1stcompo from "./components/Hello1stcompo";
-import Props2ndComp from "./components/Props2ndComp";
 
 function App() {
-  const [before, after] = useState("noob");
+  const [nums, setNums] = useState(0);
+  const [num, setNum] = useState(0);
+  useEffect(() => {
+    alert(`she is poking me `);
+    console.log("she is poking me in console tooo");
+  }, [nums]);
+  useEffect(() => {
+    alert(`she poked me in second half toooo `);
+    console.log("she is poking me in console tooo in second half ");
+  }, [num]);
 
-  const changeHandler = () => {
-    after("Intermediate");
-  };
   return (
-    <div>
-      <p>hii</p>
-      <Hello1stcompo />
-      <Props2ndComp occupation="developer" hobby="coding" />
-      <p>{before}</p>
-      <button onClick={changeHandler}>click me</button>
-    </div>
+    <>
+      <button
+        onClick={() => {
+          setNums(nums + 1);
+        }}
+      >{`clicked ${nums} times`}</button>
+
+      <button
+        onClick={() => {
+          setNum(num + 1);
+        }}
+      >{`clicked ${num} times`}</button>
+    </>
   );
 }
 
