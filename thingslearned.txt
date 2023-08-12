@@ -1,0 +1,7 @@
+props
+useState
+conditional rendering
+components
+two binding
+lifting the state up
+derived and computed state
