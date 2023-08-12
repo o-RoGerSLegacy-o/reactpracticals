@@ -2,11 +2,11 @@ import React, { useRef, useState, useEffect } from "react";
 
 const RefPractise = () => {
   const [count, setCount] = useState(0);
-  const cmpunk = useRef(0);
+  const cmpunk = useRef();
 
   useEffect(() => {
     cmpunk.current = cmpunk.current + 1;
-  }, []);
+  });
 
   return (
     <div>
