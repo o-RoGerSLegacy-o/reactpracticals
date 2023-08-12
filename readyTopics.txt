@@ -1,0 +1,8 @@
+1.useful stateful lists 
+2.filter reduce map difference?see several examples? 
+3.how to show content conditional
+4.how to keep your jsx code clean
+5.rendering list  using conditionals 
+6.how to styles differently the react component using css modules and css styles tools?
+7.how to fix errors 
+8.
